@@ -14,8 +14,8 @@ const todoSchema = new Schema({
     }
 }, {timestamps: true});
 
-//.model() applies that schema to a particular model which we then use to interact with a 
-//collection (in your DB) of that same name but pluralized i.e if model = todo then, collection = todos
+//.model() creates a new model which we then use to interact with a MongoDB collection.
+//Syntax - mongoose.model(modelName, schema, collectionName, modelOptions), last 2 are optional arguments
 const ToDo = mongoose.model('ToDo' , todoSchema);
 
-module.exports = ToDo;
+module.exports = ToDo; //exporting 'ToDo' model for use in different files
