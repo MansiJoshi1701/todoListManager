@@ -1,5 +1,9 @@
 import React from 'react'
 
+//You get 3 props from the App.js (parent of ToDoList.js file) - 
+//1. todos - a list of all todo items
+//2. onDelete - a function to delete a todo item
+//3. onUpdate - a function to update a todo item
 const ToDoList = ({todos , onDelete , onUpdate}) => {
     return(
         <ul>
